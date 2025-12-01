@@ -2,8 +2,9 @@ const form = document.querySelector('form')
 const height = document.getElementById('height')
 const weight = document.getElementById('weight')
 const btn = document.querySelector('button')
-const resultMessage = document.querySelector('h1')
-const category = document.querySelector('h2')
+const resultMessage = document.querySelector('h2')
+const category = document.querySelector('h3')
+const empty = document.querySelector('p')
 
 function convertCentimeter(cent) {
     return (cent / 100)
@@ -32,6 +33,11 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 })
 btn.addEventListener('click', () => {
-    resultMessage.textContent = `BMI: ${result().toFixed(2)}`
-    category.textContent = bmiCategory()
+    if (weight.value == "" || height.value == "") {
+        empty.textContent = "Fill the input"
+    } else {
+        resultMessage.textContent = `BMI: ${result().toFixed(2)} kg/m²`
+        category.textContent = bmiCategory()
+        empty.textContent = ""
+    }
 })

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 *,
 ::before,
 ::after {
@@ -8,19 +10,38 @@
 
 body {
     height: 100vh;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F8F4F1;
 }
 
 form {
     width: 90%;
 }
 
-.contain {}
+h1 {
+    font-size: 18px;
+    text-align: center;
+}
 
 label {
     display: block;
+    margin-top: 1rem;
+}
+
+.wrap {
+    background-color: #fff;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid #000;
+    margin-top: 0.5rem;
+    padding-right: 5px;
+    border-radius: 8px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -30,10 +51,69 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input {
-    width: 100%;
+    width: 80%;
     padding: 5px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: none;
+    outline: none;
 }
 
 button {
-    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    color: #fff;
+    background-color: #4f6bed;
+    justify-self: center;
+    margin-top: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #3B50B2;
+}
+
+h2 {
+    margin: 1rem 0 0.3rem 0;
+}
+
+p {
+    margin-top: 0.5re
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+    .wrap {
+        font-size: 20px;
+        width: calc(100vw/2.3);
+    }
+    label {
+        font-size: 18px;
+    }
+    input {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 18px;
+    }
+    .contain {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    button {
+        font-size: 20px;
+        margin-top: 1.5rem;
+    }
+    h2,h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
 }

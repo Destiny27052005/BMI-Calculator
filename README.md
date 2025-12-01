@@ -1,1 +1,2 @@
 # BMI-Calculator
+BMI Calculator – Instantly find your Body Mass Index by entering your height and weight. This tool helps you determine whether you’re underweight, normal weight, overweight, or in an obesity range according to standard health metrics. It’s fast, simple, and designed to give you a clearer understanding of your overall body weight status.
