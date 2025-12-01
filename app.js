@@ -6,14 +6,17 @@ const resultMessage = document.querySelector('h2')
 const category = document.querySelector('h3')
 const empty = document.querySelector('p')
 
+// Convert centimeter to meter
 function convertCentimeter(cent) {
     return (cent / 100)
 }
 
+// Calculate BMi
 function result() {
     return ((weight.value) / convertCentimeter(height.value) ** 2)
 }
 
+// BMI Category(WHO)
 function bmiCategory() {
     if (result() < 18.5) {
         return "Underweight: BMI < 18.5"
@@ -29,9 +32,12 @@ function bmiCategory() {
     }
 }
 
+// prevent default form
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 })
+
+// button action
 btn.addEventListener('click', () => {
     if (weight.value == "" || height.value == "") {
         empty.textContent = "Fill the input"
